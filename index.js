@@ -29,18 +29,14 @@ function checkCollision(rock) {
     const rockLeftEdge = positionToInteger(rock.style.left)
     const rockRightEdge = (rockLeftEdge + 20)
 
-<<<<<<< HEAD
-console.log(`Dodger left: ${dodgerLeftEdge},
-Dodger right: ${dodgerRightEdge}.
-Rock left: ${rockLeftEdge},
-Rock right: ${rockRightEdge}`)
-=======
->>>>>>> eff6500a3a600f6af7646ab3147035d4b35bbb88
+    console.log(`Dodger left: ${dodgerLeftEdge},
+      Dodger right: ${dodgerRightEdge}.
+      Rock left: ${rockLeftEdge},
+      Rock right: ${rockRightEdge}`)
   return ((rockLeftEdge <= dodgerLeftEdge && rockRightEdge >= dodgerLeftEdge) ||
         (rockLeftEdge >= dodgerLeftEdge && rockRightEdge <= dodgerRightEdge) ||
         (rockLeftEdge <= dodgerRightEdge && rockRightEdge >= dodgerRightEdge))
       /**
-<<<<<<< HEAD
         * Think about it -- what's happening here?
         * There's been a collision if one of three things is true:
         * 1. The rock's left edge is < the DODGER's left edge,
@@ -50,17 +46,6 @@ Rock right: ${rockRightEdge}`)
         * 3. The rock's left edge is < the DODGER's right edge,
         *    and the rock's right edge is > the DODGER's right edge
         */
-=======
-               * Think about it -- what's happening here?
-               * There's been a collision if one of three things is true:
-               * 1. The rock's left edge is < the DODGER's left edge,
-               *    and the rock's right edge is > the DODGER's left edge;
-               * 2. The rock's left edge is > the DODGER's left edge,
-               *    and the rock's right edge is < the DODGER's right edge;
-               * 3. The rock's left edge is < the DODGER's right edge,
-               *    and the rock's right edge is > the DODGER's right edge
-               */
->>>>>>> eff6500a3a600f6af7646ab3147035d4b35bbb88
   }
 }
 
@@ -90,7 +75,6 @@ function createRock(x) {
     rock.style.top = `${bottom + 2}px`
 
     if (checkCollision(rock)) {
-<<<<<<< HEAD
       return endGame();
     }
     if (bottom < 400) {
@@ -100,33 +84,17 @@ function createRock(x) {
       rock.remove();
     }
   }
-  //myInterval = setInterval(moveRock, 1000)
-=======
-    return endGame();
-    }
-
-    else {
-    window.requestAnimationFrame(moveRock);
-    }
-
-    if (bottom >= 400) {
-           //var roc = document.getElementsByClassName( 'rock' );
-           //roc.parentNode.removeChild( roc );
-    rock.remove();
-    }
-         /**
-          * If a rock collides with the DODGER,
-          * we should call endGame()
-          */
-          /**
-           * Otherwise, if the rock hasn't reached the bottom of
-           * the GAME, we want to move it again.
-           */
-       // We should kick of the animation of the rock around here
+    /**
+      * If a rock collides with the DODGER,
+      * we should call endGame()
+      */
+      /**
+       * Otherwise, if the rock hasn't reached the bottom of
+       * the GAME, we want to move it again.
+       */
+    // We should kick of the animation of the rock around here
     //window.requestAnimationFrame(moveDown)
   }
-  myInterval = setInterval(moveRock, 1000)
->>>>>>> eff6500a3a600f6af7646ab3147035d4b35bbb88
   window.requestAnimationFrame(moveRock)
 
   // Add the rock to ROCKS so that we can remove all rocks
@@ -148,17 +116,14 @@ function endGame() {
    */
   clearInterval(gameInterval);
 
-<<<<<<< HEAD
 /*for (i = ROCKS.length; i > 0; i--) {
     ROCKS.pop();
   }
   while(ROCKS.length > 0){
-=======
-//for (i = ROCKS.length; i > 0; i--) {
-    //ROCKS.pop();
-  //}
-  /* while(ROCKS.length > 0){
->>>>>>> eff6500a3a600f6af7646ab3147035d4b35bbb88
+  for (i = ROCKS.length; i > 0; i--) {
+    ROCKS.pop();
+  }
+  * while(ROCKS.length > 0){
     ROCKS.pop();
   }
   for (let i = 0; i < child.length; i++) {
@@ -170,18 +135,7 @@ while (rockList[0]) {
   rockList[0].remove();
 }
 
-<<<<<<< HEAD
 document.removeEventListener('keydown', moveDodger);
-=======
-  document.removeEventListener('keydown', function(e) {
-    if (e.which === 37) {
-        moveDodgerLeft()
-          }
-    if (e.which === 39) {
-        moveDodgerRight()
-          }
-    });
->>>>>>> eff6500a3a600f6af7646ab3147035d4b35bbb88
 
 return alert("You lose!");
 }
@@ -190,10 +144,10 @@ return alert("You lose!");
 function moveDodger(e) {
     if (e.which === 37) {
         moveDodgerLeft()
-          }
+    }
     if (e.which === 39) {
         moveDodgerRight()
-          }
+    }
 }
   /**
    * This function should call `moveDodgerLeft()`
