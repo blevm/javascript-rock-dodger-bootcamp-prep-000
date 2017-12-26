@@ -141,10 +141,10 @@ return alert("You lose!");
 
 
 function moveDodger(e) {
-    if (e.which === 37) {
+    if (e.which === LEFT_ARROW) {
         moveDodgerLeft()
     }
-    if (e.which === 39) {
+    if (e.which === RIGHT_ARROW) {
         moveDodgerRight()
     }
     console.log("we're moving!")
