@@ -163,7 +163,7 @@ function moveDodgerLeft() {
     if (left > 0) {
       DODGER.style.left = `${left - 6}px`
     }})
-    console.log('moving left!')
+    //console.log('moving left!')
 }
   /**
    * This function should move DODGER to the left
@@ -176,7 +176,7 @@ function moveDodgerRight() {
     if (left < 360) {
       DODGER.style.left = `${left + 6}px`
     }})
-    console.log('moving right!')
+    //console.log('moving right!')
 }
   /**
    * This function should move DODGER to the right
