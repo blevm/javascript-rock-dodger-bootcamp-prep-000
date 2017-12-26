@@ -147,6 +147,7 @@ function moveDodger(e) {
     if (e.which === 39) {
         moveDodgerRight()
     }
+    console.log("we're moving!")
 }
   /**
    * This function should call `moveDodgerLeft()`
