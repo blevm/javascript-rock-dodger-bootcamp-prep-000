@@ -147,7 +147,7 @@ function moveDodger(e) {
     if (e.which === RIGHT_ARROW) {
         moveDodgerRight()
     }
-    console.log("we're moving!")
+    //console.log("we're moving!")
 }
   /**
    * This function should call `moveDodgerLeft()`
@@ -164,6 +164,7 @@ function moveDodgerLeft() {
       var left = parseInt(leftNumbers, 10)
       DODGER.style.left = `${left - 4}px`
     }})
+    console.log('moving left!')
 }
   /**
    * This function should move DODGER to the left
@@ -177,6 +178,7 @@ function moveDodgerRight() {
       var left = parseInt(leftNumbers, 10)
       DODGER.style.left = `${left + 4}px`
     }})
+    console.log('moving right!')
 }
   /**
    * This function should move DODGER to the right
