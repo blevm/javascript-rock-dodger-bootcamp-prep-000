@@ -161,7 +161,7 @@ function moveDodgerLeft() {
   window.requestAnimationFrame(function() {
     var left = positionToInteger(DODGER.style.left)
     if (left > 0) {
-      DODGER.style.left = `${left - 4}px`
+      DODGER.style.left = `${left - 6}px`
     }})
     console.log('moving left!')
 }
@@ -174,7 +174,7 @@ function moveDodgerRight() {
   window.requestAnimationFrame(function() {
     var left = positionToInteger(DODGER.style.left)
     if (left < 360) {
-      DODGER.style.left = `${left + 4}px`
+      DODGER.style.left = `${left + 6}px`
     }})
     console.log('moving right!')
 }
@@ -200,5 +200,5 @@ function start() {
 
   gameInterval = setInterval(function() {
     createRock(Math.floor(Math.random() *  (GAME_WIDTH - 20)))
-  }, 3500)
+  }, 2500)
 }
